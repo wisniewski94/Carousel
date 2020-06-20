@@ -1,0 +1,73 @@
+
+$shadow: rgba(29, 65, 121, 0.09)
+
+body
+  position: relative
+  display: block
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+  -ms-transition: all 0.3s ease-in-out
+  -o-transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in-out
+  &.hidden
+    display: none
+
+html, body
+  overflow-x: hidden
+
+.frame
+  height: 100%
+
+.carousel
+  cursor: -webkit-grab
+  &-item
+    height: 90%
+    width: 25%
+    float: left
+    .box
+      top: 0
+      height: 100%
+      width: 100%
+      background-color: #e8f1ff
+      position: relative
+      -webkit-transition: all 0.25s ease-out
+      -moz-transition: all 0.25s ease-out
+      -ms-transition: all 0.25s ease-out
+      -o-transition: all 0.25s ease-out
+      transition: all 0.25s ease-out
+      user-select: none
+      -ms-user-select: none
+      -moz-user-select: none
+      -webkit-user-select: none
+      margin: 0 auto
+      display: block
+      border-radius: 8px
+      box-shadow: 1px 2px 1px $shadow, 2px 4px 2px $shadow, 4px 8px 4px $shadow, 8px 16px 8px $shadow, 16px 32px 16px $shadow
+  &::after
+    content: " "
+    clear: both
+    display: table
+
+.carousel-indicators
+  display: table
+  .carousel-indicator
+    float: left
+    width: 14px
+    height: 4px
+    border-radius: 2px
+    margin: 2px
+    cursor: pointer
+    background-color: #2649a9
+    opacity: 0.5
+    -webkit-transition: all 0.15s ease-out
+    -moz-transition: all 0.15s ease-out
+    -ms-transition: all 0.15s ease-out
+    -o-transition: all 0.15s ease-out
+    transition: all 0.15s ease-out
+    &.active
+      opacity: 1
+
+  &::after
+    content: " "
+    clear: both
+    display: table
