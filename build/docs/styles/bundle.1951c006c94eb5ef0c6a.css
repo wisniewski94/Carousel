@@ -1,0 +1,300 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  body.hidden {
+    display: none; }
+
+html, body {
+  overflow-x: hidden; }
+
+.frame {
+  height: 100%; }
+
+.carousel {
+  cursor: -webkit-grab; }
+  .carousel-item {
+    height: 90%;
+    width: 25%;
+    float: left; }
+    .carousel-item .box {
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #e8f1ff;
+      position: relative;
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -ms-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      margin: 0 auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 1px 2px 1px rgba(29, 65, 121, 0.09), 2px 4px 2px rgba(29, 65, 121, 0.09), 4px 8px 4px rgba(29, 65, 121, 0.09), 8px 16px 8px rgba(29, 65, 121, 0.09), 16px 32px 16px rgba(29, 65, 121, 0.09); }
+  .carousel::after {
+    content: " ";
+    clear: both;
+    display: table; }
+
+.carousel-indicators {
+  display: table; }
+  .carousel-indicators .carousel-indicator {
+    float: left;
+    width: 14px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #2649a9;
+    opacity: 0.5;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out; }
+    .carousel-indicators .carousel-indicator.active {
+      opacity: 1; }
+  .carousel-indicators::after {
+    content: " ";
+    clear: both;
+    display: table; }
+
+.button-cover, .knobs, .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  overflow: hidden; }
+
+.button.b2 {
+  border-radius: 4px; }
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3; }
+
+.knobs {
+  z-index: 2; }
+
+.layer {
+  width: 100%;
+  background-color: #f2f6fc;
+  transition: 0.3s ease all;
+  z-index: 1; }
+
+/* Button 17 */
+#button-17 .knobs:before, #button-17 .knobs span {
+  content: 'OFF';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px; }
+
+#button-17 .knobs:before {
+  transition: 0.3s ease all, left 0.5s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  z-index: 2; }
+
+#button-17 .knobs span {
+  background-color: #5386d0;
+  border-radius: 4px;
+  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  z-index: 1; }
+
+#button-17 .checkbox:checked + .knobs:before {
+  content: 'ON';
+  left: 42px; }
+
+#button-17 .checkbox:checked + .knobs span {
+  left: 42px;
+  background-color: #e44034; }
+
+#button-17 .checkbox:checked ~ .layer {
+  background-color: #fcebeb; }
+
+.debug {
+  background-color: rgba(255, 0, 0, 0.2);
+  outline: solid #f00 1px !important; }
+  .debug * {
+    background-color: rgba(0, 255, 0, 0.2);
+    outline: solid #f00 1px !important; }
+  .debug * * {
+    background-color: rgba(0, 0, 255, 0.2); }
+  .debug * * * {
+    background-color: rgba(255, 0, 255, 0.2); }
+  .debug * * * * {
+    background-color: rgba(0, 255, 255, 0.2); }
+  .debug * * * * * {
+    background-color: rgba(255, 255, 0, 0.2); }
+  .debug * * * * * * {
+    background-color: rgba(255, 0, 0, 0.2); }
+  .debug * * * * * * * {
+    background-color: rgba(0, 255, 0, 0.2); }
+  .debug * * * * * * * * {
+    background-color: rgba(0, 0, 255, 0.2); }
+
+/*
+ Atom One Dark by Daniel Gamage
+ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+ base:    #282c34
+ mono-1:  #abb2bf
+ mono-2:  #818896
+ mono-3:  #5c6370
+ hue-1:   #56b6c2
+ hue-2:   #61aeee
+ hue-3:   #c678dd
+ hue-4:   #98c379
+ hue-5:   #e06c75
+ hue-5-2: #be5046
+ hue-6:   #d19a66
+ hue-6-2: #e6c07b
+ */
+.hljs {
+  display: block;
+  font-family: monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  padding: 0.5em 1em;
+  color: #abb2bf;
+  background: #282c34; }
+  .hljs-comment, .hljs-quote {
+    color: #5c6370;
+    font-style: italic; }
+  .hljs-doctag, .hljs-keyword, .hljs-formula {
+    color: #c678dd; }
+  .hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst {
+    color: #e06c75; }
+  .hljs-literal {
+    color: #56b6c2; }
+  .hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string {
+    color: #98c379; }
+  .hljs-built_in,
+  .hljs-class .hljs-title {
+    color: #e6c07b; }
+  .hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-number {
+    color: #d19a66; }
+  .hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-title {
+    color: #61aeee; }
+  .hljs-emphasis {
+    font-style: italic; }
+  .hljs-strong {
+    font-weight: bold; }
+  .hljs-link {
+    text-decoration: underline; }
+
+body {
+  margin: 0 auto;
+  max-width: 1024px; }
+
+h1 {
+  font-size: 60px;
+  color: #5486d0;
+  position: absolute;
+  bottom: 8%;
+  right: 15%; }
+
+.carousel {
+  max-width: 220px;
+  margin: 30px auto 0;
+  height: 400px; }
+
+.carousel-indicators {
+  margin: 40px auto 0; }
+
+.button, h1, .switch {
+  font-family: 'Concert One', cursive; }
+
+.switch {
+  text-align: center;
+  margin: 5px auto; }
+  .switch .button {
+    margin: 9px auto; }
+  .switch p {
+    padding: 4px;
+    color: #303a59; }
+
+.hljs {
+  max-width: 767px;
+  margin: 20px auto;
+  border-radius: 4px; }
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 30px auto; }
+
+.github {
+  text-align: center;
+  margin: 10px; }
+

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
-    "build": "webpack 00"
+    "build": "webpack --config webpack.prod.js",
+    "gh": "webpack --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",

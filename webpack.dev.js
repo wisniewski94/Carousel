@@ -10,6 +10,10 @@ module.exports = {
   entry: {
     bundle: './docs/engine.js',
   },
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'js/main.[hash].js'
+  },
   devServer: {
     port: 3001,
     contentBase: path.resolve(__dirname, 'dist'),
